@@ -1,2 +1,0 @@
-# hexasync.com
-hexasync.com
