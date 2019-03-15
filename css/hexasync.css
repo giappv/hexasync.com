@@ -1417,6 +1417,6 @@ Version: 1.0
 
 /** hexasync custom css */
 
-#particles-js {
-    height: 1000px !important;
+.particles-js-canvas-el {
+    height: 800px !important;
 }
