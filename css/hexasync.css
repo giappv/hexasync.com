@@ -1414,3 +1414,9 @@ Version: 1.0
      font-weight: 500;
      margin: 20px 0 19px !important;
 }
+
+/** hexasync custom css */
+
+#particles-js {
+    height: 1000px !important;
+}
