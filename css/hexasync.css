@@ -111,7 +111,7 @@ Version: 1.0
 }
  .badge-primary {
      background-color: rgba(92, 93, 232, 0.1);
-     color: #5c5de8;
+     color: #f2c811;
 }
  .badge-danger {
      background-color: rgba(250, 100, 35, 0.1);
@@ -131,7 +131,7 @@ Version: 1.0
 }
  .badge-white {
      background-color: rgba(255, 255, 255, 0.81);
-     color: #5c5de8 !important;
+     color: #f2c811 !important;
 }
 /* Button */
  .btn {
@@ -145,14 +145,14 @@ Version: 1.0
      box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.2);
 }
  .btn-primary {
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#5a7ce2+0,8283e8+50,5c5de8+51,565bd8+71,575cdb+100 */
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#5a7ce2+0,8283e8+50,f2c811+51,565bd8+71,575cdb+100 */
      background: #5a7ce2;
     /* Old browsers */
-     background: -moz-linear-gradient(-45deg, #5a7ce2 0%, #8283e8 50%, #5c5de8 51%, #565bd8 71%, #575cdb 100%);
+     background: -moz-linear-gradient(-45deg, #5a7ce2 0%, #8283e8 50%, #f2c811 51%, #565bd8 71%, #575cdb 100%);
     /* FF3.6-15 */
-     background: -webkit-linear-gradient(-45deg, #5a7ce2 0%,#8283e8 50%,#5c5de8 51%,#565bd8 71%,#575cdb 100%);
+     background: -webkit-linear-gradient(-45deg, #5a7ce2 0%,#8283e8 50%,#f2c811 51%,#565bd8 71%,#575cdb 100%);
     /* Chrome10-25,Safari5.1-6 */
-     background: linear-gradient(135deg, #5a7ce2 0%,#8283e8 50%,#5c5de8 51%,#565bd8 71%,#575cdb 100%);
+     background: linear-gradient(135deg, #5a7ce2 0%,#8283e8 50%,#f2c811 51%,#565bd8 71%,#575cdb 100%);
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5a7ce2', endColorstr='#575cdb',GradientType=1 );
     /* IE6-9 fallback on horizontal gradient */
@@ -373,7 +373,7 @@ Version: 1.0
      box-shadow: -1px 92px 99px -62px rgba(0, 0, 0, 0.12), 0 25px 65px 0 rgba(0, 0, 0, 0.08);
 }
  .text-primary {
-     color: #5c5de8 !important;
+     color: #f2c811 !important;
      text-decoration: none !important;
 }
 /* Particles */
