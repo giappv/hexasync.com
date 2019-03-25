@@ -384,7 +384,7 @@ Version: 1.0
  #particles-js {
      position: absolute;
      width: 100%;
-     height: 100%;
+     height: 100vh;
 }
 /* Navbar */
  .osahan-navbar.fixed-top {
@@ -524,7 +524,7 @@ Version: 1.0
      opacity: 0.2;
 }
  .bg-primary{
-    height: 800px;
+    height: 100vh;
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#6247e5+0,42b7f5+100 */
      background: #6247e5;
     /* Old browsers */
@@ -1419,6 +1419,5 @@ Version: 1.0
 /** hexasync custom css */
 
 .particles-js-canvas-el {
-    height: 800px !important;
-    background-color: #4e8eef;
+    height: 100vh !important;    
 }
