@@ -82,6 +82,7 @@
 /*------------------------------------------------------------------------*/
 /*------------------------------------------------------------------------*/
 
+
 @function v($x, $y) {
 	$start-x: -100px;
 	$end-x: 1500px;
@@ -110,6 +111,8 @@
 
 	@return nth($x-list, $x), nth($y-list, $y);
 }
+
+
 
 @function randomVList() {
 	$x-maxsteps: 50;
@@ -221,7 +224,6 @@
 	overflow: hidden;
 	width: 100%;
 	margin: 0 auto;
-	/*background: #333;*/
 	background-color: #FBAB7E;
 	background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 50%, #ffffff 99%);
 	position: relative;
