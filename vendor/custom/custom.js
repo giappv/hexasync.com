@@ -134,7 +134,7 @@ particlesJS("particles-js", {
       },
       "move": {
         "enable": true,
-        "speed": 20,
+        "speed": 12,
         "direction": "none",
         "random": false,
         "straight": false,
