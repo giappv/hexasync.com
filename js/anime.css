@@ -22,14 +22,14 @@ body {
       display: block;
       position: absolute;
       height: 100%;
-      width: 300px;
-      left: 50%;
+      /*width: 300px;
+      left: 50%;*/
   }
   
   .bubblepath {
       height: 100%;
       padding: 0 1px;
-      display: hidden;
+      display: block;
       width: 60px;
   }
   
@@ -37,7 +37,7 @@ body {
       height: 40px;
       width: 40px;
       border-radius: 100%;
-      position: absolute;
+      position: relative;
       background-color: #fff;
       bottom: 0;
   }
