@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+         <meta charset="utf-8" />
+      <style type="text/css">
+         /*canvas{ width: 300px; height: 300px;}*/
+      </style>
+   </head>
+   <body>
+
+      <canvas id="canvas" width="300" height="300"></canvas>
+      
+      <script type ="application/javascript" language="javascript">
+
+         var canvasColor = ~~(Math.random() * 360);
+
+         var NUM_THINGS = 1;
+         var THING_SIZE = 40;
+
+         window.requestAnimFrame = (function() {
+            return window.requestAnimationFrame ||
+               window.webkitRequestAnimationFrame ||
+               window.mozRequestAnimationFrame ||
+               window.oRequestAnimationFrame ||
+               window.msRequestAnimationFrame ||
+               function( /* function */ callback, /* DOMElement */ element) {
+                  window.setTimeout(callback, 1000 / 60);
+            };
+         })();
+
+         var magento = new Image();
+         var item = new Object();
+         init();
+
+         animate();
+
+         function init() {
+            magento.src = 'vendor/custom/Icons/magento.png';
+            item = getRandomImage();
+         }
+
+         function animate() {
+            window.requestAnimFrame(animate);
+            draw();
+         }
+
+         function draw() {
+            var ctx = document.getElementById('canvas').getContext('2d');
+            ctx.globalCompositeOperation = 'destination-over';
+            drawCanvas(ctx);
+            drawItem(ctx,item);
+            moveItem(item);
+         }
+
+         function getRandomArbitrary(min, max) {
+            return (Math.random() * (max - min)) + min;
+         }
+
+         function getRandomImage() {
+            return {
+               position: {
+                  // (x, y) from upper left corner of thing
+                  x: getRandomArbitrary(0, window.innerWidth - THING_SIZE),
+                  y: getRandomArbitrary(0, window.innerHeight - THING_SIZE)
+               },
+               velocity: {
+                  x: getRandomArbitrary(-1,1),
+                  y: getRandomArbitrary(-1,1)
+               },
+               width: THING_SIZE,
+               height: THING_SIZE,
+               strokeStyle: "white",
+               img: magento,
+            };
+         }
+
+         function drawItem(ctx, item) {
+            ctx.fillRect(item.position.x, item.position.y, item.width, item.height);
+            ctx.drawImage(item.img,item.position.x, item.position.y, item.width, item.height);
+         }
+
+         function moveItem(item) {
+            item.position.x = item.position.x + item.velocity.x;
+            item.position.y = item.position.y + item.velocity.y;
+            if(item.position.x + item.position.y < 0 || 
+               item.position.x > window.innerWidth || item.position.y > window.innerHeight) {
+               item.position.x = getRandomArbitrary(0, window.innerWidth - THING_SIZE);
+               item.position.y = getRandomArbitrary(0, window.innerHeight - THING_SIZE);
+            }
+         }
+
+         function drawCanvas(el) {
+            el.canvas.width = window.innerWidth;
+            el.canvas.height = window.innerHeight;
+            var fillStyle = "hsl(" + canvasColor + ", 60%, 60%)";
+            el.fillStyle = fillStyle;
+            el.clearRect(0, 0, el.canvas.width, el.canvas.height); // clear canvas
+            el.fillRect(0, 0, el.canvas.width, el.canvas.height);
+         }
+      </script>
+   </body>
+</html>

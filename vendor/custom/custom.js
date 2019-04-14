@@ -40,48 +40,7 @@ $(window).scroll(function() {
     }
 });
 
-// ===========Screens============
-var screensslider = $(".screens");
-if (screensslider) {
-    screensslider.owlCarousel({
-        center: true,
-        items: 2,
-        loop: true,
-        navText: ["<i class='fa fa-chevron-left'></i>", "<i class='fa fa-chevron-right'></i>"],
 
-
-        responsive: {
-            0: {
-                items: 1,
-                nav: true
-            },
-            800: {
-                items: 2,
-                nav: true
-            },
-        }
-    });
-}
-
-// ===========Blogs Slider============
-var blogslider = $(".blogs-slider");
-if (blogslider.length > 0) {
-    blogslider.owlCarousel({
-        items: 3,
-
-
-        responsive: {
-            0: {
-                items: 1,
-                nav: false
-            },
-            800: {
-                items: 3,
-                nav: false
-            },
-        }
-    });
-}
 
 // ===========Particles============
 particlesJS("particles-js", {
@@ -136,7 +95,7 @@ particlesJS("particles-js", {
         "enable": true,
         "speed": 12,
         "direction": "none",
-        "random": false,
+        "random": true,
         "straight": false,
         "out_mode": "out",
         "bounce": false,
@@ -187,9 +146,6 @@ particlesJS("particles-js", {
       }
     },
     "retina_detect": true
-});
-
-// ===========wow============
-new WOW().init();	
+});	
 
 });

@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -662,7 +660,7 @@
          </div>
       </footer>
       
-  
+      
       <!-- Bootstrap core JavaScript -->
       <script src="vendor/jquery/jquery.min.js"></script>
       <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -687,10 +685,9 @@
       <!-- <script src="js/stats.js"></script>
       <script src="js/clear-browser-cache.js"></script> -->
     
-      <script src="js/jquery.cookie.js"></script>
-
       <script>
-          
+
+   
         if (window.performance) {
           console.info("window.performance works fine on this browser");
         }
@@ -705,9 +702,18 @@
             // window.location.reload(false); 
         }
 
+        var local_test = window.localStorage.getItem("local_test");
+        if(local_test == null) {
+           local_test = 0;
+           window.localStorage.setItem("local_test", local_test);
+        } 
+
+
         checkFirstVisit();        
 
         function checkFirstVisit() {
+            window.localStorage.setItem("local_test", parseInt(window.local_test)+1);
+            console.log(window.localStorage.getItem("local_test"));
             if(document.cookie.indexOf('mycookie')==-1) {
                 // cookie doesn't exist, create it now
                 document.cookie = 'mycookie=1';
